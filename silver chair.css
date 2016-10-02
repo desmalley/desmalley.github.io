@@ -15,7 +15,15 @@ h2 {
 	color: black;
 	font-size: 56px; 
 }
-
+heading {
+	background-image: url('http://www.aceshowbiz.com/images/news/the-chronicles-of-narnia-reboot-the-silver-chair-is-happening-at-sony-s-tristar.jpg');
+	background-position: center top;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
 
 .hero {
 	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
