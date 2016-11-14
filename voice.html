@@ -20,7 +20,9 @@ window.onload = function(){
         var commands = {
             'Hello': function() {
                 alert('Hi! I can hear you.');
+            responsiveVoice.speak("Hi! I can hear you.");
             }
+            
         };
         annyang.addCommands(commands);
         annyang.start(); 
@@ -31,7 +33,5 @@ window.onload = function(){
 
 <body>
 <h1>We got this far</h1>
-
-<input onclick='responsiveVoice.speak("Hello World");' type='button' value='🔊 Play' />
 </body>
 </html>
