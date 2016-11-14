@@ -11,7 +11,7 @@
 <script type="text/javascript" src="js/angular-route.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
-
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
 <script>
@@ -27,11 +27,11 @@ window.onload = function(){
     }
 }
 </script>
-
 </head>
 
 <body>
 <h1>We got this far</h1>
 
+<input onclick='responsiveVoice.speak("Hello World");' type='button' value='🔊 Play' />
 </body>
 </html>
