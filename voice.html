@@ -20,11 +20,14 @@ window.onload = function(){
     if (annyang) {
         var commands = {
             
- 
           
+            'Hello Computer': function() {
+                //alert('Hi! I can hear you.');
+            responsiveVoice.speak("Hello, go ahead, I can hear you.");
+            }          
             'tell me a story': function() {
                 //alert('Hi! I can hear you.');
-            responsiveVoice.speak("Once there was a boy named Neal who said he was going to visit widows but hung out with hight school girls instead.  The end.");
+            responsiveVoice.speak("Once upon a time there was a bunch of stinky children.");
             }
             
         };
@@ -36,6 +39,6 @@ window.onload = function(){
 </head>
 
 <body>
-<h1>story</h1>
+<h1>hello and story</h1>
 </body>
 </html>
