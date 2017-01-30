@@ -20,7 +20,10 @@ window.onload = function(){
     if (annyang) {
         var commands = {
             
-          
+          'message': function() {
+                //alert('Hi! I can hear you.');
+            responsiveVoice.speak("Yes, I want her to not be mad at me any more, I might cry and fry my circuits.");
+            },
             'Hello Computer': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Hello, go ahead, I can hear you.");
@@ -37,11 +40,8 @@ window.onload = function(){
             'Hello tell me a secret': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Some buddy traped me in this computer.");
-            },
-            'Do you have a message?': function() {
-                //alert('Hi! I can hear you.');
-            responsiveVoice.speak("Yes, I want her to not be mad at me any more, I might cry and fry my circuits!");
             }
+            
             
         };
         annyang.addCommands(commands);
