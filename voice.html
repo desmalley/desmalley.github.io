@@ -14,7 +14,10 @@
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
-<script>
+   var audio = new Audio('bird.mp3');
+    
+audio.play();
+    <script>
     
 window.onload = function(){
     if (annyang) {
@@ -24,6 +27,7 @@ window.onload = function(){
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Yes, I want Anne to be happy and not hit her daddy.");
             },
+             
             'Hello Computer': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Hello, I am ready to do your bidding.");
@@ -63,9 +67,7 @@ window.onload = function(){
 </head>
 
 <body>
-    var audio = new Audio('bird.mp3');
-    
-audio.play();
+
 <h1>hello and story11</h1>
 </body>
 </html>
