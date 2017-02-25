@@ -23,7 +23,7 @@
 			thistime = new Date();
 			if (audiochannels[a]['finished'] < thistime.getTime()) {			// is this channel finished?
 				audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
-				audiochannels[a]['channel'].src = document.getElementById(s).src;
+				audiochannels[a]['channel'].src = document.get;ElementById(s).src;
 				audiochannels[a]['channel'].load();
 				audiochannels[a]['channel'].play();
 				break;
@@ -34,5 +34,7 @@
 
 </head>
 	<body>
-		
-	</body>
+		play_multi_sound(1);
+	<h1>sound file 01</h1>
+</body>
+</html>
