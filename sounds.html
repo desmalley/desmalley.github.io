@@ -4,11 +4,17 @@
 <html lang="en">
 <head>
 
-<audio id="multiaudio1" src="explode.wav" preload="auto"></audio>
+<audio id="multiaudio1" src="shoot.wav" preload="auto"></audio>
 <audio id="multiaudio2" src="shoot.wav" preload="auto"></audio>
+<audio id="multiaudio3" src="shoot.wav" preload="auto"></audio>
+<audio id="multiaudio4" src="shoot.wav" preload="auto"></audio>
+<audio id="multiaudio5" src="shoot.wav" preload="auto"></audio>
 
 <a href="javascript:play_multi_sound('multiaudio1');">Flute</a><br />
 <a href="javascript:play_multi_sound('multiaudio2');">Piano Chord</a><br />
+<a href="javascript:play_multi_sound('multiaudio3');">Synth Vox</a><br />
+<a href="javascript:play_multi_sound('multiaudio4');">Shimmer</a><br />
+<a href="javascript:play_multi_sound('multiaudio5');">Sweep</a><br />
 
 <script type="text/javascript">
 	var channel_max = 10;										// number of channels
@@ -23,7 +29,7 @@
 			thistime = new Date();
 			if (audiochannels[a]['finished'] < thistime.getTime()) {			// is this channel finished?
 				audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
-				audiochannels[a]['channel'].src = document.get;ElementById(s).src;
+				audiochannels[a]['channel'].src = document.getElementById(s).src;
 				audiochannels[a]['channel'].load();
 				audiochannels[a]['channel'].play();
 				break;
@@ -34,7 +40,7 @@
 
 </head>
 	<body>
-		play_multi_sound(1);
-	<h1>sound file 01</h1>
+		
+	<h1>sound file 02</h1>
 </body>
 </html>
