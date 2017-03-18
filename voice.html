@@ -32,7 +32,12 @@ window.onload = function(){
             
           'message to anne': function() {
                 //alert('Hi! I can hear you.');
-            PlaySound("sound1");
+              var person = prompt("Please enter your name", "Harry Potter");
+
+if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+}
             responsiveVoice.speak("Yes, I want Anne to be happy and not hit her daddy.");
             
             },
@@ -73,5 +78,6 @@ window.onload = function(){
 <body>
    
 <h1>hello and story18</h1>
+
 </body>
 </html>
