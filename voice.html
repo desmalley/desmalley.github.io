@@ -29,17 +29,11 @@ enablejavascript="true">
 window.onload = function(){
     if (annyang) {
         var commands = {
+           'message to anne': function() {
+              //alert('Hi! I can hear you.');
             
-          'message to anne': function() {
-                //alert('Hi! I can hear you.');
-              var person = prompt("Please enter your name", "Harry Potter");
-
-if (person != null) {
-    document.getElementById("demo").innerHTML =
-    "Hello " + person + "! How are you today?";
-}
-            responsiveVoice.speak("Yes, I want Anne to be happy and not hit her daddy.");
-            
+             //responsiveVoice.speak("Yes, I want Anne to be happy and not hit her daddy.");
+            PlaySound(sound1);
             },
             'Your favorite book': function() {
                 //alert('Hi! I can hear you.');
@@ -77,7 +71,7 @@ if (person != null) {
 
 <body>
    
-<h1>hello and story19</h1>
+<h1>hello and story20</h1>
 
 </body>
 </html>
