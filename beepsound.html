@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 </head>
-
+ 
 <script>
 function PlaySound() {
 
@@ -19,6 +19,15 @@ snd.play();
 <body>
   <h1>This is heading 1</h1>
 <h1> I am awesome! </h1>
-PlaySound();
-</body>
+//PlaySound();
+
+  
+var person = prompt("Please enter your name", "Harry Potter");
+
+if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+}  
+ 
+  </body>
 </html>
