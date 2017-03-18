@@ -5,18 +5,20 @@
 </head>
 
 <script>
-function PlaySound(soundObj) {
-  var sound = document.getElementById(soundObj);
-  sound.Play();
+function PlaySound() {
+
+var snd = new Audio("explode.wav"); // buffers automatically when created
+snd.play();
+  
 }
 </script>
 
-<embed src="explode.wav" autostart="false" width="0" height="0" id="sound1"
-enablejavascript="true">
+  //<embed src="explode.wav" autostart="false" width="0" height="0" id="sound1"
+//enablejavascript="true">
 
 <body>
   <h1>This is heading 1</h1>
 <h1> I am awesome! </h1>
-PlaySound("sound1");
+PlaySound();
 </body>
 </html>
