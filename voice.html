@@ -15,6 +15,16 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
   
+  <script>
+function PlaySound(soundObj) {
+  var sound = document.getElementById(soundObj);
+  sound.Play();
+}
+
+  </script>
+ <embed src="explode.wav" autostart="false" width="0" height="0" id="sound1"
+enablejavascript="true">
+  
    <script>
 window.onload = function(){
     if (annyang) {
@@ -23,6 +33,7 @@ window.onload = function(){
           'message to anne': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Yes, I want Anne to be happy and not hit her daddy.");
+            PlaySound("sound1");
             },
             'Your favorite book': function() {
                 //alert('Hi! I can hear you.');
