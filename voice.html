@@ -15,11 +15,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
   
-<script>
-function PlaySound() {
-var snd = new Audio("gma.wav"); // buffers automatically when created
-snd.play();
-}
+//<script>
+//function PlaySound() {
+//var snd = new Audio("gma.wav"); // buffers automatically when created
+//snd.play();
+//}
 </script>
 
 <script>
@@ -29,7 +29,9 @@ window.onload = function(){
            'Grandma sing me a song': function() {
               //alert('Hi! I can hear you.');
              //responsiveVoice.speak("Yes, I want Anne to be happy and not hit her daddy.");
-            PlaySound();
+            //PlaySound();
+             var snd = new Audio("gma.wav"); // buffers automatically when created
+              snd.play();
             },
             'Your favorite book': function() {
                 //alert('Hi! I can hear you.');
@@ -67,7 +69,7 @@ window.onload = function(){
 
 <body>
    
-<h1>hello and story26</h1>
+<h1>hello and story27</h1>
 
 </body>
 </html>
