@@ -45,9 +45,10 @@ window.onload = function(){
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("pokemon rocks unlike Neal.");
             },
-            'Sing me a song': function() {
+            'Please sing a song': function() {
                 //alert('Hi! I can hear you.');
-            responsiveVoice.speak("I am a little teapot short and stout.  Here is my handle, here is my spout.");
+             var snd = new Audio("song_play.wav"); // buffers automatically when created
+              snd.play();
             },
             
             'Hello tell me a secret': function() {
@@ -69,7 +70,7 @@ window.onload = function(){
 
 <body>
    
-<h1>hello and story27</h1>
+<h1>hello and story28</h1>
 
 </body>
 </html>
