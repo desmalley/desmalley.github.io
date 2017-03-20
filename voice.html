@@ -23,29 +23,23 @@ window.onload = function(){
         var commands = {
            'Grandma sing me a song': function() {
              var songnumber = Math.floor((Math.random() * 3) + 1);
-              switch(songnumber) {
-    case 1:
-        var snd = new Audio("gma.wav"); // buffers automatically when created
-              snd.play();
-        break;
-    case 2:
-        var snd = new Audio("cider.wav"); // buffers automatically when created
-              snd.play();
-        break;
-   case 3:
-        var snd = new Audio("song_play.wav"); // buffers automatically when created
-              snd.play();
-        break;
-   case 4:
-        var snd = new Audio("love.wav"); // buffers automatically when created
-              snd.play();          
-        break;               
-    default:
+            
+             if(songnumber==1) {
+                var snd = new Audio("gma.wav"); // buffers automatically when created
+                snd.play();
+             } elseif(songnumber==2) {
+                var snd = new Audio("cider.wav"); // buffers automatically when created
+               snd.play();
+             } elseif(songnumber==3) {
+               var snd = new Audio("song_play.wav"); // buffers automatically when created
+                snd.play();
+              } elseif(songnumber==4) {
+                 var snd = new Audio("love.wav"); // buffers automatically when created
+               snd.play();          
         
-}
-             
-             
-            },
+            }//end if
+                else{}
+           },
             'Your favorite book': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Human literature is a bore, but occaisionally I do read James Joyce for a laugh.");
