@@ -15,19 +15,14 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
   
-//<script>
-//function PlaySound() {
-//var snd = new Audio("gma.wav"); // buffers automatically when created
-//snd.play();
-//}
-</script>
+
 
 <script>
 window.onload = function(){
     if (annyang) {
         var commands = {
            'Grandma sing me a song': function() {
-             var songnumber = Math.floor((Math.random() * 10) + 1);
+             var songnumber = Math.floor((Math.random() * 3) + 1);
               switch(songnumber) {
     case 1:
         var snd = new Audio("gma.wav"); // buffers automatically when created
@@ -42,16 +37,14 @@ window.onload = function(){
               snd.play();
         break;
    case 4:
-        var snd = new Audio(" shoot.wav"); // buffers automatically when created
+        var snd = new Audio("shoot.wav"); // buffers automatically when created
               snd.play();          
         break;               
     default:
-        code block
+        
 }
              
              
-             var snd = new Audio("gma.wav"); // buffers automatically when created
-              snd.play();
             },
             'Your favorite book': function() {
                 //alert('Hi! I can hear you.');
