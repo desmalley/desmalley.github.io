@@ -20,8 +20,10 @@
 <script>
 window.onload = function(){
     if (annyang) {
-        var commands = {
-           'Grandma sing me a song': function() {
+       
+      var commands = {
+      
+          'Grandma sing me a song': function() {
              var songnumber = Math.floor((Math.random() * 3) + 1);
             
              switch(songnumber) {
@@ -46,31 +48,39 @@ window.onload = function(){
                
                 default:
                  }//end switch
-                             
-                                    
-           },
-            'Your favorite book': function() {
+             },//end Gma Sing me a song
+
+         
+          'Your favorite book': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Human literature is a bore, but occaisionally I do read James Joyce for a laugh.");
             },          
+            
             'tell me a story': function() {
                 //alert('Hi! I can hear you.');
+            responsiveVoice.speak("Sure!  You'll have to remind me who I'm talking to.  Tell me your name.");
+            
             responsiveVoice.speak("Once upon a time there was a bunch of stinky children.");
             },
-             'Hello jeffrey': function() {
+          
+            'Hello jeffrey': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("pokemon rocks unlike Neal.");
             },
+            
+        
             'Please sing a song': function() {
                 //alert('Hi! I can hear you.');
              var snd = new Audio("song_play.wav"); // buffers automatically when created
               snd.play();
             },
             
+            
             'Hello tell me a secret': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("Help me, somebody trapped me in this computer!");
             },
+        
             'Hello Alexa.': function() {
                 //alert('Hi! I can hear you.');
             responsiveVoice.speak("what is six times six.");
@@ -83,6 +93,7 @@ window.onload = function(){
 }
 </script>
 </head>
+
 <style>  
 img{
     display: block;
@@ -92,7 +103,7 @@ img{
 
   <body>
    <img src="gmaphoto.JPG" height="1000" width="800" align="middle">
-<h1>hello and story37</h1>
+<h1>hello and story55</h1>
 
 </body>
 </html>
