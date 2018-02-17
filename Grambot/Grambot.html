@@ -9,9 +9,9 @@ if (annyang) {
     'hello': function() { alert('Hello world!'); },
     'goodbye': function() { alert('Goodbye Cruel World!'); },
     'grandma sing me a song': function() {   
-      var snd = Math.floor((Math.random() * 3) + 1);
+        var snd = Math.floor((Math.random() * 3) + 1);
       
-      switch(songnumber) {
+      switch(snd) {
         case 1:
         var snd = new Audio("songs/cider.wav"); // buffers automatically when created
                          snd.play();
@@ -27,6 +27,7 @@ if (annyang) {
         var snd = new Audio("songs/Huntin.mp3"); // buffers automatically when created
                          snd.play();
         break;
+      };//end grandma sing me a song  
       };//end switch statement
   };//end commands var
   // Add our commands to annyang
@@ -36,6 +37,6 @@ if (annyang) {
 </script>
 </head>
   <body>
- <h1> Rev 9</h1>
+ <h1> Rev 10</h1>
    </body>
 </html>
