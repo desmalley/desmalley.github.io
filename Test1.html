@@ -7,8 +7,11 @@ if (annyang) {
   // Let's define a command.
   var commands = {
     'hello': function() { alert('Hello world!'); },
-    'goodbye': function() { alert('Goodbye Cruel World!'); }
-  };
+    'goodbye': function() { alert('Goodbye Cruel World!'); },
+    'play sound': function() {            
+        var snd = new Audio("gma.wav"); // buffers automatically when created
+                         snd.play();}
+  };//end commands var
 
   // Add our commands to annyang
   annyang.addCommands(commands);
@@ -19,6 +22,6 @@ if (annyang) {
 </script>
 </head>
   <body>
- <h1> Rev 1</h1>
+ <h1> Rev 2</h1>
    </body>
 </html>
