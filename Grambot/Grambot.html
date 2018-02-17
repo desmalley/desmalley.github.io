@@ -8,24 +8,28 @@ if (annyang) {
   var commands = {
     'hello': function() { alert('Hello world!'); },
     'goodbye': function() { alert('Goodbye Cruel World!'); },
-    'grandma sing me a song': function() {            
+    'grandma sing me a song': function() {   
+      var snd = Math.floor((Math.random() * 3) + 1);
+      
+      switch(songnumber) {
+        case 1:
         var snd = new Audio("songs/cider.wav"); // buffers automatically when created
-                         snd.play();},
-    'grandma sing me another song': function() {            
+                         snd.play();
+        break;
+          
+        case 2:
+          
         var snd = new Audio("songs/gma.wav"); // buffers automatically when created
-                         snd.play();},
-  'grandma sing me the huntin song': function() {            
+                         snd.play();
+        break;
+        case 3:
+          
         var snd = new Audio("songs/Huntin.mp3"); // buffers automatically when created
-                         snd.play();}
+                         snd.play();
+        break;
   };//end commands var
   // Add our commands to annyang
   annyang.addCommands(commands);
   // Start listening.
   annyang.start();
 }
-</script>
-</head>
-  <body>
- <h1> Rev 7</h1>
-   </body>
-</html>
