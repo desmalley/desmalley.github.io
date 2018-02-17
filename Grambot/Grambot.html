@@ -1,1 +1,25 @@
+<!doctype html>
+<html lang="en">
 
+<head><script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script>
+if (annyang) {
+  // Let's define a command.
+  var commands = {
+    'hello': function() { alert('Hello world!'); },
+    'goodbye': function() { alert('Goodbye Cruel World!'); },
+    'play sound': function() {            
+        var snd = new Audio("gma.wav"); // buffers automatically when created
+                         snd.play();}
+  };//end commands var
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+  // Start listening.
+  annyang.start();
+}
+</script>
+</head>
+  <body>
+ <h1> Rev 2</h1>
+   </body>
+</html>
