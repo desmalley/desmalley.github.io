@@ -10,10 +10,10 @@ if (annyang) {
  // var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created 
 //  var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
   
-  var commands ={
-    'Where were you born': function(){ var Birth1 = new Audio("songs/gma.wav");
-                                        Birth1.play;},
-    'In what house were you born': function(){  var snd = new Audio("songs/gma.wav"); // buffers automatically when created
+  var commands = {
+    'Where were you born': function() {var Birth1 = new Audio("self/facts/Q1_birth_region.wav");
+                                        Birth1.play();},
+    'In what house were you born': function() {  var snd = new Audio("songs/gma.wav"); // buffers automatically when created
                          snd.play();} 
   //  'How did you get your name': function(){ Birth3.play;}
   };//end factcommands
