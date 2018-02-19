@@ -13,7 +13,8 @@ if (annyang) {
   var commands ={
     'Where were you born': function(){ var Birth1 = new Audio("songs/gma.wav");
                                         Birth1.play;},
-    'In what house were you born': function(){var Birth2 = new Audio("self/facts/Q1_born_house.wav"); Birth2.play;} 
+    'In what house were you born': function(){  var snd = new Audio("songs/gma.wav"); // buffers automatically when created
+                         snd.play();} 
   //  'How did you get your name': function(){ Birth3.play;}
   };//end factcommands
   
@@ -63,7 +64,7 @@ img{
 </style> 
   
   <body>
-        <h1> Rev 19</h1>
+        <h1> Rev 20</h1>
         <img src="Images/Granbot_image.PNG" height="1000" width="800" align="middle">
    </body>
 </html>
