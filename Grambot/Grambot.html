@@ -4,6 +4,20 @@
 <head><script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script>
 if (annyang) {
+
+  //*******************Fact Commands********************
+ // var Birth1 = new Audio("self/facts/Q1_birth_region.wav"); // buffers automatically when created 
+ // var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created 
+  var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
+  
+  var factcommands ={
+    'Where were you born': function(){var Birth1 = new Audio("self/facts/Q1_birth_region.wav");  Birth1.play; }    ,
+    'In what house were you born': function(){var Birth2 = new Audio("self/facts/Q1_born_house.wav"); Birth2.play;}, 
+    'How did you get your name': function(){ Birth3.play;}
+  }//end factcommands
+  
+  
+  
   // Let's define a command.
   var commands = {
     'hello': function() { alert('Hello world!'); },
@@ -32,6 +46,7 @@ if (annyang) {
   };//end commands var
   // Add our commands to annyang
   annyang.addCommands(commands);
+   annyang.addCommands(factcommands);
   // Start listening.
   annyang.start();
 }
