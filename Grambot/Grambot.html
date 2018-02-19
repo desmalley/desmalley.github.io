@@ -6,22 +6,20 @@
 if (annyang) {
 
   //*******************Fact Commands********************
- // var Birth1 = new Audio("self/facts/Q1_birth_region.wav"); // buffers automatically when created 
- // var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created 
+  var Birth1 = new Audio("self/facts/Q1_birth_region.wav"); // buffers automatically when created 
+  var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created 
   var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
   
-  var commands = {
-    'Where were you born': function() {var Birth1 = new Audio("self/facts/Q1_birth_region.wav");
-                                        Birth1.play();},
-    'In what house were you born': function() {  var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created
-                         Birth2.play();},
+  var factcommands = {
+    'Where were you born': function() {Birth1.play();},
+    'In what house were you born': function() {Birth2.play();},
     'How did you get your name': function(){ Birth3.play();}
   };//end factcommands
   
   
   
   // Let's define a command.
-  var factcommands = {
+  var commands = {
     'hello': function() { alert('Hello world!'); },
     'goodbye': function() { alert('Goodbye Cruel World!'); },
     'grandma sing me a song': function() {   
@@ -64,7 +62,7 @@ img{
 </style> 
   
   <body>
-        <h1> Rev 21</h1>
+        <h1> Rev 22</h1>
         <img src="Images/Granbot_image.PNG" height="1000" width="800" align="middle">
    </body>
 </html>
