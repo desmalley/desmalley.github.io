@@ -16,6 +16,26 @@ if (annyang) {
     'How did you get your name': function(){ Birth3.play();}
   };//end factcommands
   
+  //*******************Holiday Commands********************
+ var Christmas1 = new Audio("self/Holiday/Christmas1.wav"); // buffers automatically when created 
+ var Christmas2 = new Audio("self/Holiday/Christmas2.wav"); // buffers automatically when created 
+ var Christmas3 = new Audio("self/Holiday/Christmas3.wav"); // buffers automatically when created 
+ var Easter1 = new Audio("self/Holiday/Easter1.wav"); // buffers automatically when created 
+ var Thanksgiving1 = new Audio("self/Holiday/Thanksgiving1.wav"); // buffers automatically when created 
+   
+ var Holidaycommands = {
+    'tell me about Christmas': function() {
+      var choice = Math.floor((Math.random() * 2) + 1);
+      switch(choice) {
+        case 1:          Christmas1.play();          break;
+        case 2:          Christmas2.play();          break;
+        case 3:          Christmas3.play();          break;
+        break;
+      },//end switch
+    'Tell me about an Easter': function() {Easter1.play();},
+    'Tell me about a Thanksgiving': function(){ Thanksgiving1.play();}
+  };//end Holidaycommands
+   
   
   
   // Let's define a command.
@@ -45,7 +65,9 @@ if (annyang) {
       }//end switch statement
   };//end commands var
   // Add our commands to annyang
-   annyang.addCommands(factcommands);
+  
+  annyang.addCommands(Holidaycommands);
+  annyang.addCommands(factcommands);
   annyang.addCommands(commands);
 
   // Start listening.
@@ -62,7 +84,7 @@ img{
 </style> 
   
   <body>
-        <h1> Rev 22</h1>
+        <h1> Rev 23</h1>
         <img src="Images/Granbot_image.PNG" height="1000" width="800" align="middle">
    </body>
 </html>
