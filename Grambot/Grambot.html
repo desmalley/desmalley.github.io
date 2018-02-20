@@ -11,9 +11,9 @@ if (annyang) {
   var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
   
   var factcommands = {
-    'Where were you born': function() {Birth1.play();},
-    'In what house were you born': function() {Birth2.play();},
-    'How did you get your name': function(){ Birth3.play();}
+    '(Grandma) Where were you born': function() {Birth1.play();},
+    '(Grandma) In what house were you born': function() {Birth2.play();},
+    '(Grandma) How did you get your name': function(){ Birth3.play();}
   };//end factcommands
   
   
@@ -24,7 +24,7 @@ if (annyang) {
  var Thanksgiving1 = new Audio("self/Holiday/Thanksgiving1.wav"); // buffers automatically when created 
    
  var Holidaycommands = {
-    'tell me about (a) Christmas': function() {
+    '(Grandma) (Please) tell me about (a) Christmas': function() {
       var choice = Math.floor((Math.random() * 2) + 1);
       switch(choice) {
         case 1:          Christmas1.play();          break;
@@ -33,8 +33,8 @@ if (annyang) {
         break;
       }//end switch
     },//end Christmas command  
-    'Tell me about an Easter': function() {Easter1.play();},
-    'Tell me about a Thanksgiving': function(){ Thanksgiving1.play();}
+    '(Grandma) Tell me about an Easter': function() {Easter1.play();},
+    '(Grandma) Tell me about a Thanksgiving': function(){ Thanksgiving1.play();}
   };//end Holidaycommands
   
   //*******************Children Commands********************
