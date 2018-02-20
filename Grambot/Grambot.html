@@ -24,7 +24,7 @@ if (annyang) {
  var Thanksgiving1 = new Audio("self/Holiday/Thanksgiving1.wav"); // buffers automatically when created 
    
  var Holidaycommands = {
-    'tell me about Christmas': function() {
+    'tell me about (a) Christmas': function() {
       var choice = Math.floor((Math.random() * 2) + 1);
       switch(choice) {
         case 1:          Christmas1.play();          break;
