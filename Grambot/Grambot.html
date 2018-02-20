@@ -16,7 +16,7 @@ if (annyang) {
     'How did you get your name': function(){ Birth3.play();}
   };//end factcommands
   
-  //*******************Holiday Commands********************
+  
  var Christmas1 = new Audio("self/Holiday/Christmas1.wav"); // buffers automatically when created 
  var Christmas2 = new Audio("self/Holiday/Christmas2.wav"); // buffers automatically when created 
  var Christmas3 = new Audio("self/Holiday/Christmas3.wav"); // buffers automatically when created 
@@ -36,7 +36,26 @@ if (annyang) {
     'Tell me about an Easter': function() {Easter1.play();},
     'Tell me about a Thanksgiving': function(){ Thanksgiving1.play();}
   };//end Holidaycommands
-   
+  
+  //*******************Children Commands********************
+  var Debbie1 = new Audio("children/Debbie1.wav");
+  var Debbie3 = new Audio("children/Debbie3.wav");
+  var DebbieLove = new Audio("children/DebbieLove.wav");
+  var RonPans = new Audio("children/Ronpan.wav");
+  
+  var Childrencommands = {
+  "tell me about your children": function() {
+   var choice = Math.floor((Math.random() * 3) + 1);
+      switch(choice) {
+        case 1:         Debbie1.play();     break;
+        case 2:         Debbie3.play();     break;
+        case 3:         DebbieLove.play();  break;
+        case 4:         RonPans.play();     break;
+          break;
+      }//end switch
+    } //end function
+  }; //end Childrencommands
+  
   
   
   // Let's define a command.
@@ -70,6 +89,8 @@ if (annyang) {
   annyang.addCommands(Holidaycommands);
   annyang.addCommands(factcommands);
   annyang.addCommands(commands);
+  annyang.addCommands(Childrencommands);
+
 
   // Start listening.
   annyang.start();
@@ -85,7 +106,7 @@ img{
 </style> 
   
   <body>
-        <h1> Rev 23</h1>
+        <h1> Rev 24</h1>
         <img src="Images/Granbot_image.PNG" height="1000" width="800" align="middle">
    </body>
 </html>
