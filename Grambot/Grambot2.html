@@ -16,6 +16,17 @@
       alert('Hello world!');
     };
 
+      //*******************Fact Commands********************
+  var Birth1 = new Audio("self/facts/Q1_birth_region.wav"); // buffers automatically when created 
+  var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created 
+  var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
+  
+  var factcommands = {
+    '(Grandma) Where were you born': function() {Birth1.play();},
+    '(Grandma) In what house were you born': function() {Birth2.play();},
+    '(Grandma) How did you get your name': function(){ Birth3.play();}
+  };//end factcommands
+  
    
     // define our commands.
     // * The key is the phrase you want your users to say.
@@ -30,6 +41,7 @@
 
     // Add voice commands to respond to
     annyang.addCommands(commands);
+    annyang.addCommands(factcommands);
 
     // OPTIONAL: Set a language for speech recognition (defaults to English)
     // For a full list of language codes, see the documentation:
@@ -47,6 +59,6 @@
   </script>
 </head>
 <body>
-<h1>this is my try rev4 </h1>
+<h1>this is my try rev5 </h1>
   </body>
 </html>
