@@ -1,124 +1,52 @@
-
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
+  <title>annyang! Easily add speech recognition to your site</title>
+
   <script src="annyang.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
-<script>
-if (annyang) {
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  "use strict";
 
-  //*******************Fact Commands********************
-  var Birth1 = new Audio("self/facts/Q1_birth_region.wav"); // buffers automatically when created 
-  var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created 
-  var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
-  
-  var factcommands = {
-    '(Grandma) Where were you born': function() {Birth1.play();},
-    '(Grandma) In what house were you born': function() {Birth2.play();},
-    '(Grandma) How did you get your name': function(){ Birth3.play();}
-  };//end factcommands
-  
-  
- var Christmas1 = new Audio("self/Holiday/Christmas1.wav"); // buffers automatically when created 
- var Christmas2 = new Audio("self/Holiday/Christmas2.wav"); // buffers automatically when created 
- var Christmas3 = new Audio("self/Holiday/Christmas3.wav"); // buffers automatically when created 
- var Easter1 = new Audio("self/Holiday/Easter1.wav"); // buffers automatically when created 
- var Thanksgiving1 = new Audio("self/Holiday/Thanksgiving1.wav"); // buffers automatically when created 
+  // first we make sure annyang started succesfully
+  if (annyang) {
+
+    // define the functions our commands will run.
+    var hello = function() {
+      console.log('hi');
+    };
+
    
- var Holidaycommands = {
-    '(Grandma) (Please) tell me about (a) Christmas': function() {
-      var choice = Math.floor((Math.random() * 2) + 1);
-      switch(choice) {
-        case 1:          Christmas1.play();          break;
-        case 2:          Christmas2.play();          break;
-        case 3:          Christmas3.play();          break;
-        break;
-      }//end switch
-    },//end Christmas command  
-    '(Grandma) Tell me about (an) Easter (as a child)': function() {Easter1.play();},
-    '(Grandma) Tell me about (a) Thanksgiving (as a child)': function(){ Thanksgiving1.play();}
-  };//end Holidaycommands
-  
-  //*******************Children Commands********************
-  var Debbie1 = new Audio("children/Debbie1.wav");
-  var Debbie3 = new Audio("children/Debbie3.wav");
-  var DebbieLove = new Audio("children/DebbieLove.wav");
-  var RonPans = new Audio("children/Ronpan.wav");
-  
-  var Childrencommands = {
-  "tell me about your children": function() {
-   var choice = Math.floor((Math.random() * 3) + 1);
-      switch(choice) {
-        case 1:         Debbie1.play();     break;
-        case 2:         Debbie3.play();     break;
-        case 3:         DebbieLove.play();  break;
-        case 4:         RonPans.play();     break;
-          break;
-      }//end switch
-    } //end function
-  }; //end Childrencommands
-  
-  
-  
-  // Let's define a command.
-  var commands = {
-    'hello': function() { alert('Hello world!'); },
-    'goodbye': function() { alert('Goodbye Cruel World!'); },
-    '(grandma) (please) sing me a song': function() {   
-        var snd = Math.floor((Math.random() * 3) + 1);
-      
-      switch(snd) {
-        case 1:
-        var snd = new Audio("songs/cider.wav"); // buffers automatically when created
-                         snd.play();
-        break;
-          
-        case 2:
-          
-        var snd = new Audio("songs/gma.wav"); // buffers automatically when created
-                         snd.play();
-        break;
-        case 3:
-          
-        var snd = new Audio("songs/Huntin.mp3"); // buffers automatically when created
-                         snd.play();
-        break;
-      };//end grandma sing me a song  
-      }//end switch statement
-  };//end commands var
-  // Add our commands to annyang
-  
-  annyang.addCommands(Holidaycommands);
-  annyang.addCommands(factcommands);
-  annyang.addCommands(commands);
-  annyang.addCommands(Childrencommands);
+    // define our commands.
+    // * The key is the phrase you want your users to say.
+    // * The value is the action to do.
+    //   You can pass a function, a function name (as a string), or write your function as part of the commands object.
+    var commands = {
+      'hello (there)':        hello,
+    };
 
+    // OPTIONAL: activate debug mode for detailed logging in the console
+    annyang.debug();
 
-  // Start listening.
-  annyang.start();
-}
-</script>
+    // Add voice commands to respond to
+    annyang.addCommands(commands);
+
+    // OPTIONAL: Set a language for speech recognition (defaults to English)
+    // For a full list of language codes, see the documentation:
+    // https://github.com/TalAter/annyang/blob/master/docs/FAQ.md#what-languages-are-supported
+    annyang.setLanguage('en');
+
+    // Start listening. You can call this here, or attach this call to an event, button, etc.
+    annyang.start();
+  } else {
+    $(document).ready(function() {
+      $('#unsupported').fadeIn('fast');
+    });
+  }
+
+  </script>
 </head>
-  
-<style>  
-img{
-    display: block;
-    margin: 0 auto;
-}
-</style> 
-  
-  <body>
-        <h1>Gbot2.0 Rev 3</h1>
-        <p>You can use the following commands: </p>
- <ul>
-  <li>Grandma sing me a song</li>
-  <li>Tell me about your children</li>
-  <li>tell me about a Christmas</li>
-  <li>Where were you born</li>
-</ul>
-    
-    
-        <img src="Images/Granbot_image.PNG" height="1000" width="800" align="middle">
-   </body>
+<body>
+<h1>this is my try rev1 </h1>
+  </body>
 </html>
