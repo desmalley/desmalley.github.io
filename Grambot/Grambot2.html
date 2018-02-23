@@ -8,6 +8,7 @@
   <script>
   "use strict";
 
+
   // first we make sure annyang started succesfully
   if (annyang) {
 
@@ -22,9 +23,12 @@
   var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
   
   var factcommands = {
-    '(Grandma) Where were you born': function() {Birth1.play();},
-    '(Grandma) In what house were you born': function() {Birth2.play();},
-    '(Grandma) How did you get your name': function(){ Birth3.play();}
+    '(Grandma) Where were you born': function() {Birth1.play();
+                 alert('I was born in Wayne County, Wyoming.');},
+    '(Grandma) In what house were you born': function() {Birth2.play();
+                 alert('I was born in a small house on L-street.');},
+    '(Grandma) How did you get your name': function(){ Birth3.play();
+                 alert('The doctor got tired of waiting for my parents to decide on a name, so he just wrote down, Joy, and it stayed that way for sixty years.');}
   };//end factcommands
   
    
