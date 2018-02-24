@@ -20,11 +20,11 @@
   
   var factcommands = {
     '(Grandma) Where were you born': function() {Birth1.play();
-                 alert('I was born in Wayne County, Wyoming.');},
+                },
     '(Grandma) In what house were you born': function() {Birth2.play();
-                 alert('I was born in a small house on L-street.');},
+                },
     '(Grandma) How did you get your name': function(){ Birth3.play();
-                 alert('The doctor got tired of waiting for my parents to decide on a name, so he just wrote down, Joy, and it stayed that way for sixty years.');}
+                }
   };//end factcommands
  
     //*******************Holiday Commands********************
@@ -39,16 +39,14 @@
     '(Grandma) (Please) tell me about (a) Christmas': function() {
       var choice = Math.floor((Math.random() * 2) + 1);
       switch(choice) {
-        case 1:          Christmas1.play();  alert('My parents asked if I wanted a bible or a doll for Christmas.  I said I wanted a bible and they gave me both.');        break;
-        case 2:          Christmas2.play();  alert('My parents asked if I wanted a bible or a doll for Christmas.  I said I wanted a bible and they gave me both.');        break;
-        case 3:          Christmas3.play();  alert('My parents asked if I wanted a bible or a doll for Christmas.  I said I wanted a bible and they gave me both.');        break;
+        case 1:          Christmas1.play();        break;
+        case 2:          Christmas2.play();        break;
+        case 3:          Christmas3.play();         break;
         break;
       }//end switch
     },//end Christmas command  
-    '(Grandma) Tell me about (an) Easter (as a child)': function() {Easter1.play(); 
-                                             alert('On Easter, my Dad put his eggs in his coffee to make coffee-colored easter-eggs.');},
-    '(Grandma) Tell me about (a) Thanksgiving (as a child)': function(){ Thanksgiving1.play();
-                                             alert('Thanksgiving story here');}                                                                       
+    '(Grandma) Tell me about (an) Easter (as a child)': function() {Easter1.play();},
+    '(Grandma) Tell me about (a) Thanksgiving (as a child)': function(){ Thanksgiving1.play();}                                                                       
   };//end Holidaycommands
   
   //*******************Children Commands***as*****************
@@ -61,10 +59,10 @@
   "tell me about your children": function() {
    var choice = Math.floor((Math.random() * 3) + 1);
       switch(choice) {
-        case 1:         Debbie1.play(); alert('Debbie would not follow me across the street so I wacked her with a pancake turner');  break;
-        case 2:         Debbie3.play(); alert('Debbie would not follow me across the street so I wacked her with a pancake turner');   break;
-        case 3:         DebbieLove.play(); alert('Debbie would not follow me across the street so I wacked her with a pancake turner');  break;
-        case 4:         RonPans.play(); alert('Ron burned my pan so I said from now he will have to buy his own pans');   break;
+        case 1:         Debbie1.play();   break;
+        case 2:         Debbie3.play();    break;
+        case 3:         DebbieLove.play();   break;
+        case 4:         RonPans.play();    break;
           break;
       }//end switch
     } //end function
@@ -123,9 +121,11 @@
   </script>
 </head>
 <body>
-        <h1> Rev 28</h1>
-        <p>You can use the following commands: </p>
- <ul>
+        <h1> Rev 29</h1>
+  <p> If you're using Grambot from a phone go to this link instead <a href="https://desmalley.github.io/Grambot/Grambot2.html">link</a> (audio playback is not working well on phones, but this link will provide text responses)</p>
+ 
+  <p>You can use the following commands: </p>
+   <ul>
   <li>Grandma sing me a song!</li>
   <li>Tell me about your children.</li>
   <li>Tell me about a Christmas.</li>
