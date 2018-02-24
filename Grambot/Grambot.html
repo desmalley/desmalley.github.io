@@ -1,21 +1,33 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>annyang! Easily add speech recognition to your site</title>
 
-<head><script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-<script>
-if (annyang) {
+  <script src="annyang.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  "use strict";
 
-  //*******************Fact Commands********************
+
+  // first we make sure annyang started succesfully
+  if (annyang) {
+
+
+      //*******************Fact Commands********************
   var Birth1 = new Audio("self/facts/Q1_birth_region.wav"); // buffers automatically when created 
   var Birth2 = new Audio("self/facts/Q1_born_house.wav"); // buffers automatically when created 
   var Birth3 = new Audio("self/facts/Q1_name.wav"); // buffers automatically when created 
   
   var factcommands = {
-    '(Grandma) Where were you born': function() {Birth1.play();},
-    '(Grandma) In what house were you born': function() {Birth2.play();},
-    '(Grandma) How did you get your name': function(){ Birth3.play();}
+    '(Grandma) Where were you born': function() {Birth1.play();
+                 alert('I was born in Wayne County, Wyoming.');},
+    '(Grandma) In what house were you born': function() {Birth2.play();
+                 alert('I was born in a small house on L-street.');},
+    '(Grandma) How did you get your name': function(){ Birth3.play();
+                 alert('The doctor got tired of waiting for my parents to decide on a name, so he just wrote down, Joy, and it stayed that way for sixty years.');}
   };//end factcommands
-  
+ 
+    //*******************Holiday Commands********************
   
  var Christmas1 = new Audio("self/Holiday/Christmas1.wav"); // buffers automatically when created 
  var Christmas2 = new Audio("self/Holiday/Christmas2.wav"); // buffers automatically when created 
@@ -27,30 +39,32 @@ if (annyang) {
     '(Grandma) (Please) tell me about (a) Christmas': function() {
       var choice = Math.floor((Math.random() * 2) + 1);
       switch(choice) {
-        case 1:          Christmas1.play();          break;
-        case 2:          Christmas2.play();          break;
-        case 3:          Christmas3.play();          break;
+        case 1:          Christmas1.play();  alert('My parents asked if I wanted a bible or a doll for Christmas.  I said I wanted a bible and they gave me both.');        break;
+        case 2:          Christmas2.play();  alert('My parents asked if I wanted a bible or a doll for Christmas.  I said I wanted a bible and they gave me both.');        break;
+        case 3:          Christmas3.play();  alert('My parents asked if I wanted a bible or a doll for Christmas.  I said I wanted a bible and they gave me both.');        break;
         break;
       }//end switch
     },//end Christmas command  
-    '(Grandma) Tell me about (an) Easter (as a child)': function() {Easter1.play();},
-    '(Grandma) Tell me about (a) Thanksgiving (as a child)': function(){ Thanksgiving1.play();}
+    '(Grandma) Tell me about (an) Easter (as a child)': function() {Easter1.play(); 
+                                             alert('On Easter, my Dad put his eggs in his coffee to make coffee-colored easter-eggs.');},
+    '(Grandma) Tell me about (a) Thanksgiving (as a child)': function(){ Thanksgiving1.play();
+                                             alert('Thanksgiving story here');}                                                                       
   };//end Holidaycommands
   
-  //*******************Children Commands********************
+  //*******************Children Commands***as*****************
   var Debbie1 = new Audio("children/Debbie1.wav");
   var Debbie3 = new Audio("children/Debbie3.wav");
   var DebbieLove = new Audio("children/DebbieLove.wav");
-  var RonPans = new Audio("children/RonPans.wav");
+  var RonPans = new Audio("children/RonPans.wav");  
   
   var Childrencommands = {
   "tell me about your children": function() {
    var choice = Math.floor((Math.random() * 3) + 1);
       switch(choice) {
-        case 1:         Debbie1.play();     break;
-        case 2:         Debbie3.play();     break;
-        case 3:         DebbieLove.play();  break;
-        case 4:         RonPans.play();     break;
+        case 1:         Debbie1.play(); alert('Debbie would not follow me across the street so I wacked her with a pancake turner');  break;
+        case 2:         Debbie3.play(); alert('Debbie would not follow me across the street so I wacked her with a pancake turner');   break;
+        case 3:         DebbieLove.play(); alert('Debbie would not follow me across the street so I wacked her with a pancake turner');  break;
+        case 4:         RonPans.play(); alert('Ron burned my pan so I said from now he will have to buy his own pans');   break;
           break;
       }//end switch
     } //end function
@@ -90,32 +104,35 @@ if (annyang) {
   annyang.addCommands(factcommands);
   annyang.addCommands(commands);
   annyang.addCommands(Childrencommands);
+    // OPTIONAL: activate debug mode for detailed logging in the console
+    annyang.debug();
 
+    // OPTIONAL: Set a language for speech recognition (defaults to English)
+    // For a full list of language codes, see the documentation:
+    // https://github.com/TalAter/annyang/blob/master/docs/FAQ.md#what-languages-are-supported
+    annyang.setLanguage('en');
 
-  // Start listening.
-  annyang.start();
-}
-</script>
+    // Start listening. You can call this here, or attach this call to an event, button, etc.
+    annyang.start();
+  } else {
+    $(document).ready(function() {
+      $('#unsupported').fadeIn('fast');
+    });
+  }
+
+  </script>
 </head>
-  
-<style>  
-img{
-    display: block;
-    margin: 0 auto;
-}
-</style> 
-  
-  <body>
-        <h1> Rev 27</h1>
+<body>
+        <h1> Rev 28</h1>
         <p>You can use the following commands: </p>
  <ul>
-  <li>Grandma sing me a song</li>
-  <li>Tell me about your children</li>
-  <li>tell me about a Christmas</li>
-  <li>Where were you born</li>
+  <li>Grandma sing me a song!</li>
+  <li>Tell me about your children.</li>
+  <li>Tell me about a Christmas.</li>
+  <li>Where were you born?</li>
 </ul>
     
     
         <img src="Images/Granbot_image.PNG" height="1000" width="800" align="middle">
-   </body>
+  </body>
 </html>
