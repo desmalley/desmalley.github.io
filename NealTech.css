@@ -1,53 +1,46 @@
-body {
-	font-family: Georgia, serif;
-	height: 100%;
-	margin: 0;
-	text-align: center;
-	width: 100%;
+@keyframes slider {
+0% {
+	left: 0;
+}
+20% {
+	left:0;
+}
+25% {
+	left: -100%;
+}
+45% {
+	left:-100%;
+}
+50% {
+	left: -200%;
+}
+70% {
+	left: -200%;
+}
+75% {
+	left: -300%;
+}
+95% {
+	left:-400%;
+}
+100% {
+	left:-400%;
 }
 
-h1 {
-	color:silver;
-	font-size: 32px;
+}	
+#slider {
+	overflow: hidden;
 }
-
-h2 {
-	color: black;
-	font-size: 56px; 
+#slider figure img {
+	width:20%;
+	float:left;
 }
-.heading {
-	background-image: url('http://www.aceshowbiz.com/images/news/the-chronicles-of-narnia-reboot-the-silver-chair-is-happening-at-sony-s-tristar.jpg');
-	background-position: center top;
-	background-size: cover;
-	padding: 250px 0;
-	margin: 30px;
-	text-shadow: 0 2px #000000;
-	font-family: 'Trebuchet MS', 'Helvetica';
-}
-
-.hero {
-	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
-	background-position: center top;
-	background-size: cover;
-	padding: 250px 0;
-	margin: 30px;
-	text-shadow: 0 2px #000000;
-	font-family: 'Trebuchet MS', 'Helvetica';
-}
-
-
-p {
-	color: DarkGreen;
-	font-size: 20px;
-}
-
-.hero a {
-	color: #00FFAA;
-	font-size: 24px;
-	text-decoration: none;
-}
-
-#footer {
-	color: DarkSlateGray;
-	font-size: 16px;
+slider figure {
+	position: relative;
+	width: 500%;
+	margin:0;
+	left: 0;
+	text-align: left;
+	font-size: 0;
+	animation: 20s slider infinite;
 }
