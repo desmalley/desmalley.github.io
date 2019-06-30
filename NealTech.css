@@ -1,5 +1,4 @@
 
-* {box-sizing:border-box}
 nav {
     margin: 0px auto;
     width: 100%;
@@ -23,6 +22,7 @@ nav:after {
     bottom: 10px;
     z-index: -1;
 }
+* {box-sizing:border-box}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
