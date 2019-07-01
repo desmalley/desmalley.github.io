@@ -1,3 +1,9 @@
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
 nav {
     margin:0px auto;
     width:100%;
