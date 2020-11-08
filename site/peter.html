@@ -17,6 +17,8 @@ Peter has been taugh the gospel his whole life and now it is time to make the de
 (set: $prom to false)
 (set: $porn to false)
 (set: $pure to true)
+(set: $drugs to false)
+
 (set: $substancefree to true)
 (set: $coffeefree to true)
 (set: $marajuanafree to true)
@@ -26,59 +28,93 @@ Peter has been taugh the gospel his whole life and now it is time to make the de
 (set: $college to false)
 (set: $vocation to false)
 
-[[Next-&gt;Prom Challenge]]</tw-passagedata><tw-passagedata pid="2" name="Moral Challenge" tags="" position="673,925.1666666666666" size="100,100">Peter receives a text from Vanessa.  Her parents aren&#39;t home and she invites him to come over.
-
-
-[[I choose to ignore the text-&gt;pure]]
-[[I go to Vanessa&#39;s house-&gt;impure]]</tw-passagedata><tw-passagedata pid="3" name="Drug Challenge" tags="" position="674,1363.1666666666667" size="100,100">The ACT is coming up and Peter finds out that many of the other students are using Adderol during test to improve focus and Red Bull at night to lengthen their study sessions.  
+[[Next-&gt;Prom Challenge]]</tw-passagedata><tw-passagedata pid="2" name="Drug Challenge" tags="" position="674,1363.1666666666667" size="100,100">The ACT is coming up and Peter finds out that many of the other students are using Adderol during test to improve focus and Red Bull at night to lengthen their study sessions.  
 
 
 
 [[Drugs]]
 [[Drug-free]]
-</tw-passagedata><tw-passagedata pid="4" name="impure" tags="" position="431,1117.5" size="100,100">(set $pure to false)
-Peter later regrets his visit.  He feels guilty all the time.
+</tw-passagedata><tw-passagedata pid="3" name="Drugs" tags="" position="467,1536.1666666666667" size="100,100">
+{
+(set: $druganswer to (random: 1,3))
+  (if: $druganswer is 1 or 2)[ Peter&#39;s experience leads him to believe that drugs weren&#39;t as bad as he thought.  He starts experimenting with other substances.
+  (set: $drugs to true)
+   ]
+
+  (if: $druganswer is 3)[ 
+  Peter is disturbed by how he feels using substances, and quits immediately.
+   ]
 
 
-(if: $porn is true)[ Peter has to admit that his experience with pornography tempted him to try things he might not have otherwise.  He feels a little sick about it.]
+}
 
 
-[[next-&gt;Drug Challenge]]</tw-passagedata><tw-passagedata pid="5" name="Drugs" tags="" position="467,1536.1666666666667" size="100,100">Double-click this passage to edit it.
-
-[[Mission Challenge]]</tw-passagedata><tw-passagedata pid="6" name="Drug-free" tags="" position="677,1552.1666666666667" size="100,100">Double-click this passage to edit it.
 
 
-[[Mission Challenge]]</tw-passagedata><tw-passagedata pid="7" name="pure" tags="" position="678,1166.1666666666665" size="100,100">Peter texts Vanessa that he doesn&#39;t think that would be a good idea.  After sending the text he feels confident that he made the right decision.
+[[Consequences]]</tw-passagedata><tw-passagedata pid="4" name="Drug-free" tags="" position="677,1552.1666666666667" size="100,100">Peter decides to excercise and sleep well instead of resorting to chemicals.  He feels good about his performance and his stronger, more muscular body and his sharper mind. 
 
-[[Drug Challenge]]</tw-passagedata><tw-passagedata pid="8" name="Mission" tags="" position="679,1936.1666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="No Mission" tags="" position="469,1839.1666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="10" name="Mission Challenge" tags="" position="676,1738.1666666666667" size="100,100">Double-click this passage to edit it.
 
-[[Mission]]
-[[No Mission]]</tw-passagedata><tw-passagedata pid="11" name="Pornography Challenge" tags="" position="683.3333333333334,503.1666666666667" size="100,100">Peter is reminded about a dirty story that a friend shared during a campout.  He was curious about the topic and he thinks that he might just google it to better understand what his friend was talking about.  Maybe it wasn&#39;t that bad after all.
+[[Consequences]]</tw-passagedata><tw-passagedata pid="5" name="Consequences" tags="" position="676,1738.1666666666667" size="100,100">
+{
+
+ (if: $porn)[Peter marries, but his chastity issues causes his wife to feel like he doesn&#39;t love her as much as she loves him.  They eventually divorce.]
+   ]
+(else:)[Peter marries a wife who smells like the temple and who admires Peter&#39;s commitment to the gospel ]
+ 
+
+ (if: $drugs)[Peter&#39;s drug use, leads keeps him off a mission and eventually causes him to drop out of college.  He spends a decade in and out of rehab.]
+(else:)[Peter enjoys health throughout his life and is sufficiently vital to serve a Senior Mission with his wife after retirement.  ]
+
+}</tw-passagedata><tw-passagedata pid="6" name="Pornography Challenge" tags="" position="683.3333333333334,503.1666666666667" size="100,100">Later that year, Peter is reminded about a dirty story that a friend shared during a campout.  He was curious about the topic and he thinks that he might just google it to better understand what his friend was talking about.  Maybe it wasn&#39;t that bad after all.
 
 [[Peter googles-&gt;porn]]
-[[Peter doesn&#39;t google-&gt;no porn]]</tw-passagedata><tw-passagedata pid="12" name="no porn" tags="" position="671,711.5" size="100,100">Peter decides not to google.  &#39;Better off not knowing&#39;, he thinks.
+[[Peter doesn&#39;t google-&gt;no porn]]</tw-passagedata><tw-passagedata pid="7" name="no porn" tags="" position="669.3333333333334,711.5" size="100,100">Peter decides not to google.  &#39;Better off not knowing&#39;, he thinks.
 
-[[next-&gt;Moral Challenge]]</tw-passagedata><tw-passagedata pid="13" name="porn" tags="" position="478.33333333333337,684.8333333333333" size="100,100">(set: $porn to true)
+(set: $porn to false)
+[[next-&gt;Drug Challenge]]</tw-passagedata><tw-passagedata pid="8" name="porn" tags="" position="471.6666666666667,718.1666666666666" size="100,100">(set: $porn to true)
 The search immediately brings up pornography. 
 Peter closes the computer, but the images are seared into his mind.
 
-[[next-&gt;Moral Challenge]]</tw-passagedata><tw-passagedata pid="14" name="Prom Challenge" tags="" position="692,163.83333333333334" size="100,100">Peter has had a secret crush on Lizzie Laurel since the fifth grade but he never had the courage to talk to ask her out.  
-Prom is coming up.  Peter was thinking about asking Lizzie and then he heard some other guys at school mention that they might ask her as well.
+[[next-&gt;Drug Challenge]]</tw-passagedata><tw-passagedata pid="9" name="Prom Challenge" tags="" position="692,163.83333333333334" size="100,100">Peter has had a secret crush on Lizzie Laurel since the fifth grade but he never had the courage to ask her out.  
+Prom is coming up.  Peter was thinking about asking Lizzie, but he heard some other guys at school mention that they might ask her as well.
 
-[[Peter ask Laurel out in person]]
+[[Peter ask Lizzie out immediately]]
 [[Peter waits and make a grand gesture]]
 [[Peter ask someone else out]]
 
-</tw-passagedata><tw-passagedata pid="15" name="Peter ask Laurel out in person" tags="" position="542,313.83333333333337" size="100,100">{
-(set: $promanswer to (random: 1,2))
-  (if: $promanswer is 1)[ Her eyes light up and she jumps up and down give Peter a hug and whispers in Peter&#39;s ear&#39;s &#39;finally!&#39;
+</tw-passagedata><tw-passagedata pid="10" name="Peter ask Lizzie out immediately" tags="" position="542,313.83333333333337" size="100,100">{
+(set: $promanswer to (random: 1,3))
+  (if: $promanswer is 1 or 2)[ Her eyes light up and she jumps up and down.  Lizzie gives Peter a big hug and whispers in his ear,&quot;finally!&quot;
   ]
 
-  (if: $promanswer is 2)[ She says, &quot;Sure, I&#39;d be hap...&quot; and then cuts off abruptly.  You both turn to see Elias Explorer turn the corner with a giant bunch of colored balloons with with letters for LIZZIE spelled on them.  Elias see&#39;s the both of you and stiffles a whimper. He drops his head and turns to sulk away.  Lizzie is visibly shaken and says, &quot;thank you for the invitation and walks away abruptly&quot;
+  (if: $promanswer is 3)[ She says, &quot;Sure, I&#39;d be hap...&quot; and then cuts off abruptly.  You both turn to see Elias Explorer turn the corner with a giant bunch of colored balloons with with letters for LIZZIE spelled on them.  Elias see&#39;s the both of you and stiffles a whimper. He drops his head and turns to sulk away.  Lizzie is visibly shaken and says, &quot;thank you for the invitation and walks away abruptly.&quot;  Awkwardness ensues.
   ]
 
 
-}:</tw-passagedata><tw-passagedata pid="16" name="Peter waits and make a grand gesture" tags="" position="692,313.83333333333337" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Peter ask someone else out" tags="" position="842,313.83333333333337" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+}
+
+[[next-&gt;Pornography Challenge]]</tw-passagedata><tw-passagedata pid="11" name="Peter waits and make a grand gesture" tags="" position="677,318.83333333333337" size="100,100">{
+(set: $promanswer to (random: 1,3))
+  (if: $promanswer is 1 or 2)[ Peter decides to write Lizzie&#39;s name in the sky with an aeroplane.  He spends his life savings, but he&#39;s happy with the result.  He calls Lizzie to ask what she thinks, and she says she is flattered, but that Elias Explorer just asked her out and she said yes.
+  ]
+
+  (if: $promanswer is 3)[ Peter shows up at Lizzies house with a large bunch of ballons only to see the Lizzie&#39;s porch filled with roses.  He&#39;s too late.  
+  ]
+
+
+}
+[[next-&gt;Pornography Challenge]]</tw-passagedata><tw-passagedata pid="12" name="Peter ask someone else out" tags="" position="842,313.83333333333337" size="100,100">{
+(set: $promanswer to (random: 1,3))
+  (if: $promanswer is 1 or 2)[ Peter decides to ask our Sarah Saint, a nice but shy girl who doesn&#39;t get as much attention as Lizzie.  He has a great time at the dance and he was pleased to get to know Sarah who becomes a good friend.
+  ]
+
+  (if: $promanswer is 3)[ Peter takes a girl named Sarah Saint instead, but he spends the whole time gazing at Lizzie.  Sarah&#39;s too nice to say anything she&#39;s sad that she Peter is obviously not interested in getting to know her. 
+  ]
+
+
+}
+
+[[next-&gt;Pornography Challenge]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
